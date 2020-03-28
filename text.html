@@ -11,29 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--<link rel="stylesheet" href="./css/Steely.css">-->
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/paste.css">
 </head>
 
 <body>
     <header>
         <h1>FastBin</h1>
-        <ul id='menu'>
-            <li><a id="submit_raw" onclick="submit_raw()" href="#">Submit Raw</a></li>
-            <li><a id="submit_raw" onclick="submit_text()" href="#">Submit Text</a></li>
-        </ul>
     </header>
     
     <div id="reset"></div>
     
     <div id="carat">&gt;</div>
-    <div id="input" spellcheck="false" contenteditable>
+    <div id="input" spellcheck="false">
         <noscript>
-            Thank you for checking out FastBin! However, in order to securely encrypt and submit your data, you will have to enable JavaScript.
+            Thank you for checking out FastBin! However, in order to securely load and decrypt, you will have to enable JavaScript.
         </noscript>
     </div>
 
     <script src="./js/aes.js"></script>
-    <script src="./js/submit.js"></script>
+    <script src="./js/text.js"></script>
 </body>
 
 </html>

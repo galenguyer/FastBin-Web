@@ -1,0 +1,55 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #002b36;
+    color: #3ab1a8;
+    font-family: monospace;
+}
+
+header {
+    padding-left: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    display: inline;
+    float: left;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+header ul {
+    float: left;
+}
+
+
+#carat {
+    z-index: -1000;
+    position: absolute;
+    top: 4.6666rem;
+    left: 0;
+    width: 30px;
+    font-size: 13px;
+    font-family: monospace;
+    text-align: right;
+}
+
+#reset {
+    clear: both;
+}
+
+#input {
+    color: #3ab1a8;
+    background: 0 0;
+    min-height: 80%;
+    overflow: auto;
+    font-size: 14px;
+    border: 0;
+    padding: 0 0 0 2.5rem;
+    margin: 0;
+}
