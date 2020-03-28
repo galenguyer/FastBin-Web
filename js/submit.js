@@ -1,13 +1,13 @@
 const url = 'http://localhost/api';
 
 async function submit_raw() {
-    var text = document.getElementById("input").innerText;
+    var text = document.getElementById("input").innerText.trim();
     var id = get_id_from_hash(await hash_text(text));
     send_data(text, id, "raw", "");
 };
 
 async function submit_text(){
-    var text = document.getElementById("input").innerText;
+    var text = document.getElementById("input").innerText.trim();
     var id = get_id_from_hash(await hash_text(text));
     var key = generate_key(24);
     text = CryptoJS.AES.encrypt(text, key).toString();
