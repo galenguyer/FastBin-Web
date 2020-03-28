@@ -17,6 +17,17 @@ function fetch_data(id){
         .then(res => res.text())
         .then(res => {
             document.getElementById('input').innerText = res;
+
+            // Verify data
+            hash_text(document.getElementById('input').innerText).then(hash => {
+                var checksum = get_id_from_hash(hash);
+                if(checksum===id){
+                    document.getElementById('verification').innerText = "Verification Passed!"
+                }
+                else{
+                    document.getElementById('verification').innerText = "Verification failed"                    
+                }
+            });
         });
 }
 

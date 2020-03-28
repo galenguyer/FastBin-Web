@@ -21,7 +21,21 @@ function fetch_data(id, key){
         .then(res => res.text())
         .then(res => {
             var decrypted = CryptoJS.AES.decrypt(res, key).toString(CryptoJS.enc.Utf8);
-            document.getElementById('input').innerText = decrypted;
+            if(decrypted != "")
+                document.getElementById('input').innerText = decrypted;
+            else 
+                document.getElementById('input').innerText= res;
+
+            // Verify data
+            hash_text(document.getElementById('input').innerText).then(hash => {
+                var checksum = get_id_from_hash(hash);
+                if(checksum===id){
+                    document.getElementById('verification').innerText = "Verification Passed!"
+                }
+                else{
+                    document.getElementById('verification').innerText = "Verification failed"                    
+                }
+            });
         });
 }
 
