@@ -36,7 +36,11 @@ function fetch_data(id, key){
                     document.getElementById('verification').innerText = "Verification failed"                    
                 }
             });
-        });
+        })
+        .catch(err => {
+            document.getElementById('input').innerText = "Uh oh. It looks like we couldn't decrypt that snippet for you. Check that your URL contains the full id and key";
+            document.getElementById('verification').innerText = "Verification failed"                    
+        });;
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
