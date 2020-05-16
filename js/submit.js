@@ -1,4 +1,4 @@
-const url = 'http://localhost/api';
+const url = '/api';
 
 async function submit_raw() {
     var text = document.getElementById("input").innerText.trim();

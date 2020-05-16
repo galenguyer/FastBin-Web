@@ -1,4 +1,4 @@
-const url = 'http://localhost/api';
+const url = '/api';
 
 function get_id(){
     if (window.location.hash.indexOf('!',2) != -1)
